@@ -8,7 +8,6 @@ In: Proceedings of the 7th International Language Ressources and Evaluation (LRE
 - beinhaltet Wörter mit positivem oder negativem Sentiment in Intervall von [-1;1] und PoS-Tag 
 - Adjektive und Adverben, die explizit Sentiment enthalten; Nomen und Verben, die implizit Sentiment enthalten 
 - kurz für SentimentWortschatz
-
 - ein Wort kann verschiedene Einträge, bspw. nach PoS, haben
 - wichtig zu beachten, dass Wertigkeit von Worten je nach Kontext unterschiedlich ist 
 - Quellen: 

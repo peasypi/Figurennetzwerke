@@ -10,9 +10,10 @@ In: Proceedings of the 7th International Language Ressources and Evaluation (LRE
 - Adjektive und Adverben, die explizit Sentiment enthalten; Nomen und Verben, die implizit Sentiment enthalten 
 - ein Wort kann verschiedene Einträge, bspw. nach PoS, haben
 - wichtig zu beachten, dass Wertigkeit von Worten je nach Kontext unterschiedlich ist 
-- Aufbau des Wörterbuches: 
- Wort        | POS Tag     | Weight       | Flexionen       
----|---|---|---|
+- Aufbau des Wörterbuches
+
+ Wort | POS Tag | Weight  | Flexionen       
+---|---|---|---
  harmonisch  | ADJX        | +0.5243      | harmonische 
  Krise       | NN          | -0.3631      | Krisen          
 

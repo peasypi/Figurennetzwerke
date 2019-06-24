@@ -12,7 +12,7 @@ In: Proceedings of the 7th International Language Ressources and Evaluation (LRE
 - wichtig zu beachten, dass Wertigkeit von Worten je nach Kontext unterschiedlich ist 
 - Aufbau des Wörterbuches: 
 	| Wort        | POS Tag     | Weight       | Flexionen       |
-	|-------------|:-----------:|:------------:|----------------:|
+	|-------------|:------------|:------------:|----------------:|
 	| harmonisch  | ADJX        | +0.5243      | harmonische,... |
 	| Krise       | NN          | -0.3631      | Krisen          | 
 - Quellen: 

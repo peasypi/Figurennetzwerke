@@ -11,10 +11,11 @@ In: Proceedings of the 7th International Language Ressources and Evaluation (LRE
 - ein Wort kann verschiedene Einträge, bspw. nach PoS, haben
 - wichtig zu beachten, dass Wertigkeit von Worten je nach Kontext unterschiedlich ist 
 - Aufbau des Wörterbuches: 
-	| Wort        | POS Tag     | Weight       | Flexionen       |
-	|-------------|:------------|:------------:|----------------:|
-	| harmonisch  | ADJX        | +0.5243      | harmonische,... |
-	| Krise       | NN          | -0.3631      | Krisen          | 
+| Wort        | POS Tag     | Weight       | Flexionen       |
+|-------------|:------------|:------------:|----------------:|
+| harmonisch  | ADJX        | +0.5243      | harmonische,... |
+| Krise       | NN          | -0.3631      | Krisen          | 
+
 - Quellen: 
 	- **General Inquirer (GI) lexicon** 
 		- ins Deutsche übersetzt mithilfe von Google Übersetzer und danach manuell aussortiert 

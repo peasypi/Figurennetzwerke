@@ -48,3 +48,30 @@ Polanyi L., Zaenen A. (2006) Contextual Valence Shifters. In: Shanahan J.G., Qu 
 - indirekte Rede 
 - Genre des Textes
 - bspw. Filmrezension: stärkere Gewichtung an Anfang und Ende der Rezension 
+
+## Das Drama als Forschungsprojekt der Kybernetik 
+
+Cube, Felix von; Reichert, Waltraud (1965): Das Drama als Forschungsobjekt der Kybernetik. In: Helmut Kreuzer und Rul Gunzenhäuser (Hg.): Mathematik und Dichtung: Nymphenburger Verlagshandlung, S. 333–346.
+
+- Entropie: mathematisches Maß für Information
+	- Quelle mit Repertoire von n Zeichen, die mit Wahrscheinlichkeiten p von i auftreten; Nachricht entsteht durch Selektionsprozess als Anordnung der Quelle als zeitliche und räumliche Folge  
+	- Information ist am größten, wenn alle Elemente mit der gleichen Häufigkeit auftreten; Information ist null, wenn nur ein einziges  Element auftritt
+	- Häufigkeitsschemata z.B. Alphabet mit ausgezählten Häufigkeiten für die Buchstaben
+	- Wahrscheinlichkeitsschemata z.B. stochastische Systeme 
+- kybernetischer Begriff der Entropie als Maß für die Ordnung eines Systems
+- *Shannon*sche Formel bedeutsam, da sie vom Bereich der Nachrichtenübertragung in den allgemeinen Bereich universaler Strukturen führt 
+- Kybernetik als Wissenschaft gemeinsamer Strukturen und Systeme
+- elektive Entropie: eine auf dem Prinzip der gegenseitigen Beziehungen von Elementen untereinander basierende ("gegenseitige Elektion") Entropie
+	- Wahrscheinlichkeiten bzw. relative Häufigkeiten werden ersetzt durch die normierte Anzahl der auf ein Individuum entfallenden Wahlen 
+	- Beispiel Drama: quantifizierte Beziehungen müssen durch Gesamtzahl der vorhandenen Beziehungen normiert werden 
+		- Minimum der Funktion nimmt Wert 0 an, da Fall eintreten kann, dass nur *ein* Individuum gewählt wird 
+		- bei Untersuchung von Dramen Nutzung der allgemeineren Form der elektiven Entropie ohne vorgegebene Wahlzahl 
+		- weiterer Fall, dass innerhalb einer Gruppe keine positiven oder negativen Beziehungen auftreten 
+- Drama unter dem Aspekt der ästhetischen Theorie Benses
+	- Drama kann in Soziogramme zerlegt werden, wobei Beziehungen von Charakteren quantitativ erfasst werden können 
+	- Bense definiert ästhetische Information durch Folgen der Anordnung von Zeichen 
+	- ungleichmäßige und ungewöhnliche Verteilungen treten so auf - Ästhetik durch hohen Grad der Redundanz 
+- Anwendung von Entropie bei Dramenanalyse 
+	- Zeichen wird erst durch seinen Funktionscharakter in einer bestimmten Anordnung zum "Träger ästhetischer Information"
+	- handelnde Personen können als Zeichen aufgefasst werden; nicht die einzelnen Personen sind dramatisch, sondern ihre Beziehung untereinander 
+	- Untersuchung:Vergleich "normaler" Gruppen mit "dramatischen" Gruppen durch Gruppenentropie (Abweichung von "normalen" elektiven Redundanzwerten als ästhetisches Maß für Dramen)

@@ -93,7 +93,7 @@ Cube, Felix von; Reichert, Waltraud (1965): Das Drama als Forschungsobjekt der K
 | K 	| 0/0 	| 0/0 	| - 	| 
 
 
-    - Entropiediagramm: 
+- Entropiediagramm  
 		- bei einzelnen Phasen wird jeweils für Positiv und Negativ ermittelt, wie oft in einer Spalte (siehe Tabelle oben) eine Beziehung den jeweiligen Wert + bzw. - annimmt, daraus wird Entropie errechnet
 		- aus diesen Werten wird Diagramm erstellt, welches für gesamtes Drama positive oder negative Beziehungsmuster (richtiges Wort?) darstellt 
 - Ergebnisse: 

@@ -141,3 +141,27 @@ Schmidt, Thomas; Burghardt, Manuel; Dennerlein, Katrin (2018): "Kann man denn au
 	- Tool zur Erweiterung der Lexika verbessert Leistung 
 	- Stoppwortlisten keinen merklich positiven Einfluss auf SentiWS
 	- SentiWS lemmatisiert mittels Pattern-Lemmatisierer große Verbesserung 
+
+
+## Character-to-Character Sentiment Analysis in Shakespeare's Plays 
+
+Nalisnick, Eric T.; Baird, Henry S.: Character-to-character sentiment analysis in Shakespeare's plays. In: Hinrich Schuetze, Pascale Fung und Massimo Poesio (Hg.): Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics. Sofia, Bulgaria. ACL: Association for Computational Linguistics.
+
+- Können Maschinen bzw. Computer Emotionen aus einem literarischen Werk extrahieren? 
+- Emotionen werden oftmals subtil und nur indirekt transportiert
+- Nutzung von Sentiment-Lexika und Dialog-Struktur, um Beziehungsdynamiken nachzuvollziehen 
+- Bezug auf Methoden zur Zuordnung von Sprechakten in unstrukturierten Texten und der Extraktion von sozialen Netzen 
+- Beziehungen einzelner Charaktere zueinander sollen analysiert werden, anstatt die Sentimente eines ganzen Texts bzw. die eines einzelnen Charakters 
+- Extraktion der Beziehungen 
+	- Wertigkeit der Beziehungen wird extrahiert, indem jeder Fall kontinuierlichen Sprechens mit einem Wert versehen wird (aus dem Sentiment-Lexikon) und davon ausgegangen wird, dass das Sentiment dieses Sprechaktes an den vorangegangenen Sprecher gerichtet ist 
+	- die Annahme, dass Gesprochendes sich immer auf den Charakter bezieht, der vorher gesprochen hat, ist nicht immer wahr
+	- oft bezieht sich Gesprochenes auch auf jemanden "Offstage"
+- Beispiel Hamlet und Gertrude 
+	- Sentimententwicklung siehe Abbildung 2: schwarze Linie beschreibt Hamlets Sentimente gegenüber Gertrude, während die grau Fläche Gertrudes Beziehung gegenüber Hamlet darstellt 
+	- hoher Sentimentwert gegenüber seiner Mutter, obwohl er am Anfang davon ausgeht, dass Gertrude etwas mit dem Tod von König Hamlet zutun hatte 
+	- schlagartige Veränderung der Sentimente: 
+		- zum einen, als Hamlet seine Mutter mit seinen Anschuldigungen konfrontiert und sie diese klar von sich weist, der Geist von König Hamlet unterstützt die Mutter (Sentiment von -1 zu 22)
+		- zum anderen, als Gertrude erlebt, wie Hamlet Polonius, einen Unschuldigen umbringt, und mit einem Geist redet (König Hamlet), den sie nicht sehen kann (Sentiment von 1 zu -19)
+- Beispiel Romeo und Julia 
+	- starke positive Sentimente, beruhend auf Gegenseitigkeit 
+- künftige Forschung sollte tiefer in den Kontext von Dialogen eintauchen und nicht von der naiven Annahmen ausgehen, dass Gesprochenes immer auf den vorherigen Sprecher bezogen ist 

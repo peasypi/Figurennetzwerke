@@ -118,3 +118,26 @@ Ilsemann, Hartmut: Das Konzept der elektiven Entropie. Hannover. Online verfügb
 	- Figuren können nicht nach Sympathien und Antipathien befragt werden, weshalb aus Dialogen extrahiert werden muss, ob eine Person eine positive oder negative Einstellung gegenüber einer anderen Person hat
 	- zur Vergleichbarkeit der Entropiewerte von Dramen ist der maximale Wert 1 (= normierter elektiver Entropiewert, kurz EEN)
 	- Einteilung der Dramen in Phasen
+
+
+## Sentiment Analyse-Verfahren für die quantitative Untersuchung von Lessings Dramen 
+
+Schmidt, Thomas; Burghardt, Manuel; Dennerlein, Katrin (2018): "Kann man denn auch nicht lachend sehr ernsthaft sein?". Zum Einsatz von Sentiment Analyse-Verfahren für die quantitative Untersuchung von Lessings Dramen. In: Vogeler, Georg (Hg.): Kritik der digitalen Vernunft. Abstracts zur Jahrestagung des Verbandes Digital Humanities im deutschsprachigen Raum, 26.02. - 02.03.2018 an der Universität zu Köln. Köln: Universitäts- und Stadtbibliothek Köln, S. 244–249. 
+
+- Lexikonbasierte Sentimentanalyse (SA): 
+	- Wortliste, wobei jedes Wort mit Sentiment-Informationen ausgestattet ist (positive oder negative Konnotation, Polaritätsstärke) 
+- SA-Parameter: 
+	- unterschiedliche Sentiment-Lexika für die deutsche Sprache wurden untersucht (SentiWS, Berlin Affective Word List - Reloaded, NRC Emotion-Association Lexicon, Clemaride & Klenner, German Polarity Clues)
+	- Lexikon-Erweiterungstool wurde untersucht (für historische linguistische Varianten der Originalwörter) 
+	- Einfluss von Stoppwortlisten auf die Qualität der SA; dabei auch Untersuchung von Listen mit hochfrequenten Wörtern aus dem Korpus, welche zwar als sentiment-tragend ausgezeichnet werden, aufgrund ihrer hohen Nutzung allerdings ein Ungleichgewicht erzeugen (z.B. Fräulein) 
+	- Evaluation eines Lemmatisierungstools, da einige SA-Lexika Wörter nur als Grundform enthalten haben 
+- Metriken wurden auff unterschiedlichen Ebenen kalkuliert: Drama, Akt, Szene, Replik und Sprecherbeziehungen pro Drama, Akt, Szene, Replik 
+- Gold Standard: 
+	- Evaluationskorpus aus 200 Repliken, welche von fünf Personen bewertet wurden
+		- sechswertig: sehr negativ, negativ, neutral, gemischt, positiv, sehr positiv (40prozentige Übereinstimmung) 
+		- binär: positiv, negativ (77prozentige Übereinstimmung) 
+- Evaluationsmaße: Accuracy, Recall, Precision, F-Werte
+- Ergebnisse: 
+	- Tool zur Erweiterung der Lexika verbessert Leistung 
+	- Stoppwortlisten keinen merklich positiven Einfluss auf SentiWS
+	- SentiWS lemmatisiert mittels Pattern-Lemmatisierer große Verbesserung 

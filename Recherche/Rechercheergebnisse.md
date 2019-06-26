@@ -94,8 +94,8 @@ Cube, Felix von; Reichert, Waltraud (1965): Das Drama als Forschungsobjekt der K
 
 
 - Entropiediagramm  
-		- bei einzelnen Phasen wird jeweils für Positiv und Negativ ermittelt, wie oft in einer Spalte (siehe Tabelle oben) eine Beziehung den jeweiligen Wert + bzw. - annimmt, daraus wird Entropie errechnet
-		- aus diesen Werten wird Diagramm erstellt, welches für gesamtes Drama positive oder negative Beziehungsmuster (richtiges Wort?) darstellt 
+	- bei einzelnen Phasen wird jeweils für Positiv und Negativ ermittelt, wie oft in einer Spalte (siehe Tabelle oben) eine Beziehung den jeweiligen Wert + bzw. - annimmt, daraus wird Entropie errechnet
+	- aus diesen Werten wird Diagramm erstellt, welches für gesamtes Drama positive oder negative Beziehungsmuster (richtiges Wort?) darstellt 
 - Ergebnisse: 
 	- normierte elektive Entropie erreicht Wert 1 (in realen Gruppen konnte das nicht beobachtet werden 
 	- Verlauf der Entropiediagramme unterschiedlicher Dramen sehr verschieden -> Klassifizierung von Dramen durch Entropiediagramme? 

@@ -74,4 +74,46 @@ Cube, Felix von; Reichert, Waltraud (1965): Das Drama als Forschungsobjekt der K
 - Anwendung von Entropie bei Dramenanalyse 
 	- Zeichen wird erst durch seinen Funktionscharakter in einer bestimmten Anordnung zum "Träger ästhetischer Information"
 	- handelnde Personen können als Zeichen aufgefasst werden; nicht die einzelnen Personen sind dramatisch, sondern ihre Beziehung untereinander 
-	- Untersuchung:Vergleich "normaler" Gruppen mit "dramatischen" Gruppen durch Gruppenentropie (Abweichung von "normalen" elektiven Redundanzwerten als ästhetisches Maß für Dramen)
+	- Untersuchung: Vergleich "normaler" Gruppen mit "dramatischen" Gruppen durch Gruppenentropie (Abweichung von "normalen" elektiven Redundanzwerten als ästhetisches Maß für Dramen)
+	- - Begriff und Problematik des Entropiediagramms
+	- Bewertung: Ausdruck der Bewertung durch +,0,-; auf Verfeinerung wird verzichtet, da so Interpretationsprobleme auftreten; getrennte Bewertungen bei positiven *und* negativen Zügen 
+	- Phaseneinteilung: keine Beachtung der Szenen und Akte, da einerseits über mehrere Szenen unverändert, andererseits innerhalb einer Szene große Veränderung stattfinden kann; Phaseneinteilung beruhend auf kommunikativer Strukturänderungen 
+	- beteiligte Personen: auch Personen, die in einer Phase erwähnt werden, nicht aber selbst auftreten, werden einbezogen 
+	- Interpretation: Konflikte stellen sich durch hohe negative Werte dar, konfliktträchtige Situationen durch starke Differenzierung; Gleichgewichtszustand entweder durch Gleichgewicht der Sympathien oder Antipathien 
+- Entropiediagramm des Dramas Antigone von Sophokles 
+	- Aufteilung in fünf Phasen, eingeteilt durch Zeilennummern 
+	- Nebenpersonen wurden vernachlässigt, da sie Entropiediagramm nicht (wesentlich) beeinflussen 
+		- Nebenperson bedeutet: verändert zwar die äußere Handlung (z.B. ein Bote), beeinflusst aber nicht Beziehungen
+	- Beispiel anhand der 1. Phase (Antigone berichtet vom Verbot Kreons, Polyneikes zu begraben, und fasst den Entschluss, gegen dieses Verbot zu handeln; Kreon erfährt, dass gegen sein Verbot gehandelt wurde und verflucht den noch unbekannten Täter 
+
+|  	| A 	| I 	| K 	|  
+|---	|-----	|-----	|-----	|
+| A 	| - 	| 0/- 	| 0/- 	|  
+| I 	| +/0 	| - 	| 0/0 	|  
+| K 	| 0/0 	| 0/0 	| - 	| 
+
+	- Entropiediagramm: 
+		- bei einzelnen Phasen wird jeweils für Positiv und Negativ ermittelt, wie oft in einer Spalte (siehe Tabelle oben) eine Beziehung den jeweiligen Wert + bzw. - annimmt, daraus wird Entropie errechnet
+		- aus diesen Werten wird Diagramm erstellt, welches für gesamtes Drama positive oder negative Beziehungsmuster (richtiges Wort?) darstellt 
+- Ergebnisse: 
+	- normierte elektive Entropie erreicht Wert 1 (in realen Gruppen konnte das nicht beobachtet werden 
+	- Verlauf der Entropiediagramme unterschiedlicher Dramen sehr verschieden -> Klassifizierung von Dramen durch Entropiediagramme? 
+		- hohe Werte im Bereich negativer Beziehungen von Beginn an: bereits bestehende Konflikte werden ausgetragen 
+	- gegenseitige personale Beziehungen lassen sich quantifizieren  und darstellen 
+
+
+## Das Konzept der elektiven Entropie 
+
+Ilsemann, Hartmut: Das Konzept der elektiven Entropie. Hannover. Online verfügbar unter http://www.shak-stat.engsem.uni-hannover.de/mverfahr.html, zuletzt geprüft am 26.06.2019.
+
+- Begriff der elektiven Entropie ausgehend von *Shannon*scher Informationstheorie (Entropie) 
+- Information eines endlichen Schemas mit n Zeichen am größten, wenn Wahrscheinlichkeit, dass sie auftreten, gleich ist - tritt nur ein Element auf, ist Informationsgehalt Null (= Zustand maximaler Ordnung)
+- gewandelter Begriff der Entropie wird bezogen auf Soziometrie nach Jacob Levy Moreno 
+	- durch soziometrische Untersuchungen sollen soziale Gruppen durchleuchtet werden (z.B. Schulklassen); durch positive oder negative Wahlen, z.B. Wunschnachbarn für Sitzordnung
+	- so werden Netze Entwickelt, die Sympathie und Antipathie innerhalb einer Gruppe darstellen 
+- soziales System (nach Moreno) kann in kofliktreicher oder konfliktarmer Umgebung hohe oder niedrige Entropie besitzen
+	- Einzelelemente sind keine Zeichen, sondern Wahlen der Individuen (deshalb *elektive Entropie*)
+- Übertragung dieses Modells auf Dramen:
+	- Figuren können nicht nach Sympathien und Antipathien befragt werden, weshalb aus Dialogen extrahiert werden muss, ob eine Person eine positive oder negative Einstellung gegenüber einer anderen Person hat
+	- zur Vergleichbarkeit der Entropiewerte von Dramen ist der maximale Wert 1 (= normierter elektiver Entropiewert, kurz EEN)
+	- Einteilung der Dramen in Phasen

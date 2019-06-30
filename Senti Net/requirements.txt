@@ -3,4 +3,5 @@ pyfiglet==0.8.post1
 regex==2018.1.10
 requests==2.21.0
 textblob-de==0.4.3
-tqdm==4.31.1
+tqdm==4.31.1ls
+networkx==2.2

@@ -27,9 +27,9 @@ class HelpFunction():
     den Charakteren dar. Die Label der Kanten zeigen die \
     Sentiment-Werte an, die die Figuren zueinander haben.\n\n \
     Benutzung: \n 1. Wähle im Hauptmenü Drama analysieren \n \
-    2. Gib den Namen des gewählten Dramas ein. \n \
-    3. Gib den Nachnamen des Autors deines gewählten Dramas ein\n \
-    4. Dir wird die Anzahl der Akte, die das Drama hat, \
+2. Gib den Namen des gewählten Dramas ein. \n \
+3. Gib den Nachnamen des Autors deines gewählten Dramas ein\n \
+4. Dir wird die Anzahl der Akte, die das Drama hat, \
     angezeigt. \n 5. Gib ein, welchen Akt du untersuchen \
     willst oder wähle 0 für das gesamte Drama.\
     \n 6. FERTIG -- dir wird das ausgewählte Netzwerk angezeigt. \

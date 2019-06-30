@@ -5,3 +5,4 @@ requests==2.21.0
 textblob-de==0.4.3
 tqdm==4.31.1ls
 networkx==2.2
+Click==7.0

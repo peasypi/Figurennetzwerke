@@ -44,10 +44,10 @@ def main(dramaname, autor, act):
     which_act = int(act) - 1
     if which_act == -1:
         total = gt.drama_total(soup)
-        replik = gt.fill_replik_dict(total, replik)
+        replik = gt.which_type(total, replik)
     else:
         act = gt.drama_act(soup, which_act)
-        replik = gt.fill_replik_dict(act, replik)
+        replik = gt.which_type(act, replik)
     # act = drama_act(soup, which_act)
     # replik = fillReplik_dic(act, replik)
     replik = gs.get_sentis(replik)
@@ -73,7 +73,7 @@ def menu():
         os.system('clear')
         f = Figlet(font='roman')
         print(hf.colorize(str(f.renderText('Senti Net')), 'b'))
-        print(hf.colorize("Version 1.0, yay \n", 'c'))
+        print(hf.colorize("Version 2.0, jetzt auch endlich mit SentiWS \n", 'c'))
         # Print some badass ascii art header here !
         for item in menu_items:
             for key, value in item.items():

@@ -1,28 +1,36 @@
 {
     "nodes": [
         {
-            "name": "mariechen"
+            "name": "mariechen",
+            "sex": "FEMALE"
         },
         {
-            "name": "pauline"
+            "name": "pauline",
+            "sex": "MALE"
         },
         {
-            "name": "frau_weidenhammer"
+            "name": "frau_weidenhammer",
+            "sex": "FEMALE"
         },
         {
-            "name": "rese"
+            "name": "rese",
+            "sex": "FEMALE"
         },
         {
-            "name": "meister_oelze"
+            "name": "meister_oelze",
+            "sex": "MALE"
         },
         {
-            "name": "emil"
+            "name": "emil",
+            "sex": "MALE"
         },
         {
-            "name": "frau_kramer"
+            "name": "frau_kramer",
+            "sex": "FEMALE"
         },
         {
-            "name": "patschke"
+            "name": "patschke",
+            "sex": "MALE"
         }
     ],
     "links": [

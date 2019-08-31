@@ -1,5 +1,7 @@
 import spacy
 from spacy_sentiws import spaCySentiWS
+from spacy.lang.de.stop_words import STOP_WORDS
+import re
 # from tqdm import tqdm
 # from textblob_de import TextBlobDE as tb
 
@@ -13,27 +15,41 @@ class GetSentiment():
     def get_sentis(self, replik):
         for key in replik:
             for innerkey in replik[key]:
-                text = self.nlp(innerkey)
+                text = re.sub(r"\.{0,3},*!*\?*-*", "", innerkey)
+                text = self.nlp(text)
+                textwostop = ""
                 senti = 0
-                l = 0
+                tokenanzahl = 0
                 # replik[key][innerkey] = senti.sentiment.polarity
                 for token in text:
-                    if token._.sentiws is not None:
-                        l = l + 1
-                        senti = senti + token._.sentiws
-                        replik[key][innerkey] = senti / l
+                    if str(token) not in STOP_WORDS:
+                        textwostop = textwostop + " " + str(token)
+                textwostop = self.nlp(textwostop)
+                for tok in textwostop:
+                    lemma = tok.lemma_
+                    lemma = self.nlp(lemma)
+                    for lem in lemma:
+                        if lem._.sentiws is None:
+                            tokenanzahl = tokenanzahl + 1
+                        else:
+                            senti = senti + lem._.sentiws
+                            tokenanzahl = tokenanzahl + 1
+                if len(list(text)) == 1:
+                    tokenanzahl = tokenanzahl - 1
+                # replik[key][innerkey] = senti / tokenanzahl
+                replik[key][innerkey] = senti
         return replik
 
     def average_senti(self, replik):
         all_in_all = {}
         for key in replik:
-            x = 0
-            le = 0
+            gesamtsentiment = 0
+            anzahlreplik = 0
             for innerkey, value in replik[key].items():
-                if value != 0:
-                    le = le + 1
-                    x = (x + value)
-                    all_in_all[key] = x / le
+                    anzahlreplik = anzahlreplik + 1
+                    gesamtsentiment = (gesamtsentiment + value)
+                    # all_in_all[key] = gesamtsentiment / anzahlreplik
+                    all_in_all[key] = gesamtsentiment
         return all_in_all
 
 

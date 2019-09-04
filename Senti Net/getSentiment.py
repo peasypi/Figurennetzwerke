@@ -53,6 +53,20 @@ class GetSentiment():
         return all_in_all
 
 
+    def gesprochenewore(self, replik):
+        gesprocheneworte = {}
+        for key in replik:
+            anzahlworte = 0
+            for innerkey in replik[key]:
+                for wort in innerkey.split():
+                    anzahlworte += 1
+        if anzahlworte == 0:
+            pass
+        else:
+            gesprocheneworte[key] = anzahlworte
+
+        return anzahlworte
+
 '''def get_sentis(self, replik):
         for key in tqdm(replik):
             for innerkey in replik[key]:

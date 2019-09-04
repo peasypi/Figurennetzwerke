@@ -1,0 +1,98 @@
+{
+    "nodes": [
+        {
+            "name": "iphigenie",
+            "sex": "FEMALE"
+        },
+        {
+            "name": "arkas",
+            "sex": "MALE"
+        },
+        {
+            "name": "thoas",
+            "sex": "MALE"
+        },
+        {
+            "name": "pylades",
+            "sex": null
+        },
+        {
+            "name": "orest",
+            "sex": "MALE"
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "target": 1,
+            "senti": -0.010649121520006818,
+            "worte": 406
+        },
+        {
+            "source": 1,
+            "target": 0,
+            "senti": 0.002306475909452328,
+            "worte": 931
+        },
+        {
+            "source": 0,
+            "target": 2,
+            "senti": -0.0034772068127431133,
+            "worte": 2586
+        },
+        {
+            "source": 2,
+            "target": 0,
+            "senti": -0.005993688723245132,
+            "worte": 880
+        },
+        {
+            "source": 0,
+            "target": 3,
+            "senti": -0.00623809225800176,
+            "worte": 366
+        },
+        {
+            "source": 3,
+            "target": 0,
+            "senti": -0.011664340043110406,
+            "worte": 1162
+        },
+        {
+            "source": 0,
+            "target": 4,
+            "senti": -0.004994727621139219,
+            "worte": 679
+        },
+        {
+            "source": 4,
+            "target": 0,
+            "senti": -0.01407578052373563,
+            "worte": 1119
+        },
+        {
+            "source": 2,
+            "target": 4,
+            "senti": -0.00047999999999999996,
+            "worte": 11
+        },
+        {
+            "source": 4,
+            "target": 2,
+            "senti": 0.006112875695732839,
+            "worte": 140
+        },
+        {
+            "source": 4,
+            "target": 3,
+            "senti": -0.001354929536310241,
+            "worte": 674
+        },
+        {
+            "source": 3,
+            "target": 4,
+            "senti": -0.005224318248949735,
+            "worte": 750
+        }
+    ]
+}

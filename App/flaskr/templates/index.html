@@ -10,10 +10,9 @@ body {
   margin-right: 150px;
   margin-left: 80px;
 
-
 }
 
-svg {
+.graph {
   background-color: white;
   border-radius: 25px;
   position: absolute;
@@ -24,10 +23,6 @@ svg {
   margin-right: 150px;
   margin-left: 80px;
 
-}
-
-.legend {
-  background-color: "green";
 }
 
 path.link {
@@ -48,26 +43,112 @@ text {
   pointer-events: all;
 }
 
+select {
+  width: 600px;
+  height: 30px;
+  position: absolute;
+  left: 550px;
+  top: 0px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+}
+
+div {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 550px;
+  margin-left: 5px;
+}
+
+fieldset {
+  background-color: white;
+  border-radius: 25px;
+}
+
+.legende {
+  width: 100px;
+  border-radius: 25px;
+}
 
 </style>
 <body>
-<script>
+  <div>
+    <select id="json_sources" onchange="ausfuehrung(this.value)">
+        <option value="" selected="selected"> Wähle Drama</option>
+        <option value="0">Das Märchen um Mariechen</option>
+        <option value="1">Der Sagenheld Thorsten</option>
+    </select>
+  </div>
 
-// get the data
-var data = {{ data | tojson | safe }};
-var nodes = {{ data.nodes | safe }};
-var links = {{ data.links | safe }};
+  <div width=100 height="200">
+    <form>
+      <fieldset class="legende">
+        <legend>Legende</legend>
+      <fieldset>
+        <legend>Geschlecht</legend>
+          <svg width="400" height="40">
+            <rect x="50" y="20" rx="20" ry="20" width="20" height="20"
+            style="fill:pink;opacity:1" /> <text x="75" y="35" rx="20" ry="20"> Männlich </text>
+          </svg>
+          <svg width="400" height="40">
+            <rect x="50" y="20" rx="20" ry="20" width="20" height="20"
+            style="fill:blue;opacity:1" /> <text x="75" y="35" rx="20" ry="20"> Weiblich </text>
+          </svg>
+      </fieldset>
+      <fieldset>
+        <legend>Beziehung</legend>
+          <svg width="400" height="40">
+            <line x1="30" y1="30" x2="60" y2="30" stroke="red" stroke-width="2"/>
+            <text x="75" y="35" rx="20" ry="20"> Hass </text>
+          </svg>
+          <svg width="400" height="40">
+            <line x1="30" y1="30" x2="60" y2="30" stroke="green" stroke-width="2"/>
+            <text x="75" y="35" rx="20" ry="20"> Love </text>
+          </svg>
+      </fieldset>
+      <fieldset>
+        <legend>Stärke der Beziehung</legend>
+          <svg width="400" height="40">
+            <line x1="30" y1="30" x2="60" y2="30" stroke="lightgray" stroke-width="1"/>
+            <text x="75" y="35" rx="20" ry="20"> Wenig gewechselte Worte </text>
+          </svg>
+          <svg width="400" height="40">
+            <line x1="30" y1="30" x2="60" y2="30" stroke="lightgray" stroke-width="4"/>
+            <text x="75" y="35" rx="20" ry="20"> Viele gewechselte Worte </text>
+          </svg>
+      </fieldset>
+      </fieldset>
+    </form>
+  </div>
+<script>
 
 /*var margin  = {top: 240, right: 5, bottom: 5, left: 100},
     width   = 1400-margin.left-margin.right,
     height  = 900-margin.top-margin.bottom;*/
-
 var width = 600,
     height = 600;
 
 var svg = d3.select("body").append("svg")
+    .attr("class", "graph")
     .attr("width", width)
     .attr("height", height);
+
+function ausfuehrung(index){
+var data = {{ data | safe }}
+var dropdown = document.getElementById("json_sources");
+var value = dropdown.options[dropdown.selectedIndex].value;
+
+var svg = d3.select("body").append("svg")
+    .attr("class", "graph")
+    .attr("width", width)
+    .attr("height", height);
+
+//var drama = data[value];
+
+var nodes = data[value].nodes;
+var links = data[value].links;
 
 var force = d3.layout.force()
     .size([width, height])
@@ -98,8 +179,9 @@ svg.append("svg:defs").selectAll("marker")
 // add the links and the arrows
 var path = svg.append("svg:g").selectAll("path")
     .data(force.links())
-  .enter().append("svg:path")  
-    .attr("class", "link")
+  .enter().append("svg:path")
+
+.attr("class", "link")
     .attr("marker-end", "url(#end)")
     .style("stroke", pathColour);
 
@@ -120,7 +202,7 @@ var node = svg.selectAll(".node")
 
 // add the nodes
 node.append("circle")
-    .attr("r", 15)
+    .attr("r", 10)
     .style("fill", circleColour);
 
 function circleColour(d) {
@@ -131,7 +213,7 @@ function circleColour(d) {
   }
 }
 
-// add the text 
+// add the text
 node.append("text")
     .attr("x", 12)
     .attr("dy", ".35em")
@@ -143,37 +225,37 @@ function tick() {
         var dx = d.target.x - d.source.x,
             dy = d.target.y - d.source.y,
             dr = Math.sqrt(dx * dx + dy * dy);
-       /* return "M" + 
-            d.source.x + "," + 
-            d.source.y + "A" + 
-            dr + "," + dr + " 0 0,1 " + 
-            d.target.x + "," + 
+       /* return "M" +
+            d.source.x + "," +
+            d.source.y + "A" +
+            dr + "," + dr + " 0 0,1 " +
+            d.target.x + "," +
             d.target.y; */
-        
+
         const conincidentLines = false;
         if (conincidentLines) {
-          return "M" + 
-            d.source.x + "," + 
-            d.source.y + "L" + 
-            d.target.x + "," + 
+          return "M" +
+            d.source.x + "," +
+            d.source.y + "L" +
+            d.target.x + "," +
             d.target.y;
         }
         else {
           delta = calcTranslationExact(4, d.source, d.target);
           var rightwardSign = d.target.x > d.source.x ? 1 : -1;
-          return "M" + 
-              (d.source.x + rightwardSign * delta.dx) + "," + 
-              (d.source.y + (-rightwardSign * delta.dy)) + "L" + 
-              (d.target.x + rightwardSign * delta.dx) + "," + 
+          return "M" +
+              (d.source.x + rightwardSign * delta.dx) + "," +
+              (d.source.y + (-rightwardSign * delta.dy)) + "L" +
+              (d.target.x + rightwardSign * delta.dx) + "," +
               (d.target.y + (-rightwardSign * delta.dy));
         }
     });
 
     node
-        .attr("transform", function(d) { 
+        .attr("transform", function(d) {
         return "translate(" + d.x + "," + d.y + ")"; });
+  }
 }
-
 
 function calcTranslationExact(targetDistance, point0, point1) {
     var x1_x0 = point1.x - point0.x,

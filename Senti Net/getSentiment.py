@@ -9,7 +9,8 @@ from tqdm import tqdm
 class GetSentiment():
 
     nlp = spacy.load('de')
-    sentiws = spaCySentiWS(sentiws_path='/Users/pia/Desktop/SentiWS_v2.0/')
+    sentiws = spaCySentiWS(sentiws_path='/Users/Nils/Projekte/Uni-Projekte/'
+                                        'Drama Mining/figurennetzwerk/Senti Net/SentiWS_v2.0')
     nlp.add_pipe(sentiws)
 
     def get_sentis(self, replik):

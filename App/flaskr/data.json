@@ -1,4 +1,4 @@
-{
+[{
     "nodes": [
         {
             "name": "mariechen",
@@ -145,4 +145,153 @@
             "weight": -0.17644999999999997
         }
     ]
+},
+{
+    "nodes": [
+        {
+            "name": "thorsten",
+            "sex": "MALE"
+        },
+        {
+            "name": "achim",
+            "sex": "MALE"
+        },
+        {
+            "name": "jürgen",
+            "sex": "MALE"
+        },
+        {
+            "name": "theresa",
+            "sex": "FEMALE"
+        },
+        {
+            "name": "maria",
+            "sex": "FEMALE"
+        },
+        {
+            "name": "brigitte",
+            "sex": "FEMALE"
+        },
+        {
+            "name": "markus",
+            "sex": "MALE"
+        },
+        {
+            "name": "lissie",
+            "sex": "FEMALE"
+        }
+    ],
+    "links": [
+        {
+            "source": 0,
+            "target": 1,
+            "weight": 0.04411538461538459
+        },
+        {
+            "source": 0,
+            "target": 5,
+            "weight": -0.14888
+        },
+        {
+            "source": 1,
+            "target": 0,
+            "weight": 0.10401666666666665
+        },
+        {
+            "source": 1,
+            "target": 2,
+            "weight": -0.0063937662337662385
+        },
+        {
+            "source": 1,
+            "target": 3,
+            "weight": -0.0010144444444444547
+        },
+        {
+            "source": 1,
+            "target": 4,
+            "weight": 0.0695489797008547
+        },
+        {
+            "source": 1,
+            "target": 5,
+            "weight": -0.3494
+        },
+        {
+            "source": 2,
+            "target": 1,
+            "weight": 0.03416388888888889
+        },
+        {
+            "source": 2,
+            "target": 3,
+            "weight": -0.03995333333333333
+        },
+        {
+            "source": 3,
+            "target": 1,
+            "weight": -0.03952957908163266
+        },
+        {
+            "source": 3,
+            "target": 2,
+            "weight": -0.0016214285714285734
+        },
+        {
+            "source": 3,
+            "target": 4,
+            "weight": 0.10968933333333333
+        },
+        {
+            "source": 3,
+            "target": 5,
+            "weight": 0.0772478021978022
+        },
+        {
+            "source": 3,
+            "target": 7,
+            "weight": 0.08929999999999999
+        },
+        {
+            "source": 4,
+            "target": 1,
+            "weight": -0.042466965811965796
+        },
+        {
+            "source": 4,
+            "target": 3,
+            "weight": 0.1250824074074074
+        },
+        {
+            "source": 4,
+            "target": 5,
+            "weight": -0.08648
+        },
+        {
+            "source": 5,
+            "target": 0,
+            "weight": -0.03814285714285716
+        },
+        {
+            "source": 5,
+            "target": 1,
+            "weight": 0.05132000000000001
+        },
+        {
+            "source": 5,
+            "target": 3,
+            "weight": -0.059740000000000015
+        },
+        {
+            "source": 5,
+            "target": 4,
+            "weight": 0.17669666666666667
+        },
+        {
+            "source": 7,
+            "target": 3,
+            "weight": -0.17644999999999997
+        }
+    ]
 }
+]

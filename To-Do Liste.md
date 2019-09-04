@@ -14,3 +14,9 @@
 ## Mögliche Frameworks
 * [ ] Flask
 * [ ] D3
+    - [ ] Keine Namen/Labels auf Knoten
+    - [ ] Keine Pfeile/Richtungsweiser 
+    - [ ] Keine Bewegung
+
+## Nice Visualisierungen
+* http://jsfiddle.net/KjrGF/12/

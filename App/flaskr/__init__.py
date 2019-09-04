@@ -26,7 +26,7 @@ def create_app(test_config=None):
         pass
 
     # a simple page that says hello
-    @app.route('/getJson')
+    @app.route('/')
     def index():
 
         with open("flaskr/data.json", "r") as json_file:

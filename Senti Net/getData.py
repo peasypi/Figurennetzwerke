@@ -2,6 +2,7 @@ u"""getData, lol."""
 import requests
 import re
 
+
 class GetData():
     
     def eingabe_drama(self, dramaname, autor):

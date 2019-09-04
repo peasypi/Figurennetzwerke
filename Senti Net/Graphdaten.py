@@ -62,7 +62,7 @@ class Graphdaten():
 
         return links
 
-   def get_json_dict(self, links, nodes):
+    def get_json_dict(self, links, nodes):
         data = {'nodes': nodes, 'links': links}
 
         return data

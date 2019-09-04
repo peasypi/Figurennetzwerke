@@ -57,7 +57,7 @@ class GetText():
             if type(act[i].speaker) is not type(None):
                 if i + 1 < len(act):
                     if type(act[i + 1].speaker) is not type(None):
-                        if type(act[i + 1].p) is not type(None):
+                        if type(act[i + 1].lg) is not type(None):
                             speaker1 = act[i].speaker.text
                             speaker1 = re.sub(r"\.", '', speaker1.lower())
                             speaker1 = re.sub(r" ", '_', speaker1.lower())
@@ -65,9 +65,16 @@ class GetText():
                             speaker2 = re.sub(r"\.", '', speaker2.lower())
                             speaker2 = re.sub(r" ", '_', speaker2.lower())
                             dict_name = "{}-{}".format(speaker2, speaker1)
-                            text = act[i + 1].p.text
-                            if dict_name in replik:
-                                replik[dict_name][text] = 0
+                            # Abfrage auf Handshake: Wenn Sprecher1 = Sprecher3 -- Sprecher 2 spricht zu Sprecher 1
+                            if i + 2 < len(act):
+                                if act[i].speaker.text == act[i + 2].speaker.text:
+                                    text = act[i + 1].lg.text
+                                    if dict_name in replik:
+                                        replik[dict_name][text] = 0
+                            else:
+                                text = act[i + 1].lg.text
+                                if dict_name in replik:
+                                    replik[dict_name][text] = 0
             i += 1
         return replik
 
@@ -94,9 +101,16 @@ class GetText():
                             speaker2 = re.sub(r"\.", '', speaker2.lower())
                             speaker2 = re.sub(r" ", '_', speaker2.lower())
                             dict_name = "{}-{}".format(speaker2, speaker1)
-                            text = act[i + 1].lg.text
-                            if dict_name in replik:
-                                replik[dict_name][text] = 0
+                            # Abfrage auf Handshake: Wenn Sprecher1 = Sprecher3 -- Sprecher 2 spricht zu Sprecher 1
+                            if i + 2 < len(act):
+                                if act[i].speaker.text == act[i + 2].speaker.text:
+                                    text = act[i + 1].lg.text
+                                    if dict_name in replik:
+                                        replik[dict_name][text] = 0
+                            else:
+                                text = act[i + 1].lg.text
+                                if dict_name in replik:
+                                    replik[dict_name][text] = 0
             i += 1
         return replik
 

@@ -3,7 +3,7 @@ from pyfiglet import Figlet
 from getData import GetData
 from getText import GetText
 from getSentiment import GetSentiment
-from graphDaten import Graphdaten
+from Graphdaten import Graphdaten
 # from graphMalen import GraphMalen
 from helpFunction import HelpFunction
 
@@ -64,6 +64,7 @@ def main(dramaname, autor, act):
         -> irgendwie mit Flask verbinden, sollte wahrscheinlich kein Problem
         für dich sein! x3'''
     data = graph.get_json_dict(links, nodes)
+    print(data)
     # nodes = gm.get_nodes(csv_drama)
     # edges = gm.get_edges(all_in_all)
     # labels_edges = gm.get_labels(edges)

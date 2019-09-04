@@ -2,7 +2,7 @@ import spacy
 from spacy_sentiws import spaCySentiWS
 from spacy.lang.de.stop_words import STOP_WORDS
 import re
-# from tqdm import tqdm
+from tqdm import tqdm
 # from textblob_de import TextBlobDE as tb
 
 
@@ -13,7 +13,7 @@ class GetSentiment():
     nlp.add_pipe(sentiws)
 
     def get_sentis(self, replik):
-        for key in replik:
+        for key in tqdm(replik):
             for innerkey in replik[key]:
                 text = re.sub(r"\.{0,3},*!*\?*-*", "", innerkey)
                 text = self.nlp(text)
@@ -52,20 +52,19 @@ class GetSentiment():
                     all_in_all[key] = gesamtsentiment
         return all_in_all
 
-
-    def gesprochenewore(self, replik):
+    def gesprocheneworte(self, replik):
         gesprocheneworte = {}
         for key in replik:
             anzahlworte = 0
             for innerkey in replik[key]:
                 for wort in innerkey.split():
                     anzahlworte += 1
-        if anzahlworte == 0:
-            pass
-        else:
-            gesprocheneworte[key] = anzahlworte
+            if anzahlworte == 0:
+                pass
+            else:
+                gesprocheneworte[key] = anzahlworte
 
-        return anzahlworte
+        return gesprocheneworte
 
 '''def get_sentis(self, replik):
         for key in tqdm(replik):

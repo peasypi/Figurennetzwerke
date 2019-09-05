@@ -1,4 +1,4 @@
-#!/Users/Nils/Projekte/Uni-Projekte/Drama Mining/figurennetzwerk/App/env/bin/python
+#!/Users/Nils/Projekte/Uni-Projekte/DramaMining/figurennetzwerk/App/env/bin/python
 
 import sys
 import getopt

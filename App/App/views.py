@@ -25,7 +25,6 @@ def my_form_post():
     with open("App/data1.json", "r") as json_file:
         data = json.load(json_file)
         data.append(input_data)
-        print(data)
     return render_template("Graphnetz_v3.html", data=data)
 
 
@@ -61,5 +60,4 @@ def sentinet(draname):
     links = graph.get_links(edges, ids)
 
     data = graph.get_json_dict(links, nodes)
-    print(data)
     return data

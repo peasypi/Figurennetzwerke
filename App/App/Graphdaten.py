@@ -66,9 +66,3 @@ class Graphdaten():
         data = {'nodes': nodes, 'links': links}
 
         return data
-    
-
-
-
-
-

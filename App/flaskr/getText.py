@@ -1,4 +1,3 @@
-# coding=utf-8
 from bs4 import BeautifulSoup
 
 import re
@@ -68,11 +67,10 @@ class GetText():
                             dict_name = "{}-{}".format(speaker2, speaker1)
                             # Abfrage auf Handshake: Wenn Sprecher1 = Sprecher3 -- Sprecher 2 spricht zu Sprecher 1
                             if i + 2 < len(act):
-                                if type(act[i + 2].speaker) is not type(None):
-                                    if act[i].speaker.text == act[i + 2].speaker.text:
-                                        text = act[i + 1].p.text
-                                        if dict_name in replik:
-                                            replik[dict_name][text] = 0
+                                if act[i].speaker.text == act[i + 2].speaker.text:
+                                    text = act[i + 1].p.text
+                                    if dict_name in replik:
+                                        replik[dict_name][text] = 0
                             else:
                                 text = act[i + 1].p.text
                                 if dict_name in replik:
@@ -105,11 +103,10 @@ class GetText():
                             dict_name = "{}-{}".format(speaker2, speaker1)
                             # Abfrage auf Handshake: Wenn Sprecher1 = Sprecher3 -- Sprecher 2 spricht zu Sprecher 1
                             if i + 2 < len(act):
-                                if type(act[i + 2].speaker) is not type(None):
-                                    if act[i].speaker.text == act[i + 2].speaker.text:
-                                        text = act[i + 1].lg.text
-                                        if dict_name in replik:
-                                            replik[dict_name][text] = 0
+                                if act[i].speaker.text == act[i + 2].speaker.text:
+                                    text = act[i + 1].lg.text
+                                    if dict_name in replik:
+                                        replik[dict_name][text] = 0
                             else:
                                 text = act[i + 1].lg.text
                                 if dict_name in replik:

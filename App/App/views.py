@@ -15,28 +15,27 @@ def index():
         data = json.load(json_file)
     return render_template("Graphnetz_v3.html", data=data)
 
+
 @app.route('/', methods=['POST'])
 def my_form_post():
     gd = GetData()
     name = request.form['Name']
     autor = request.form['Autor']
+    act = request.form['Akt']
     draname = gd.eingabe_drama(name, autor)
-    input_data = sentinet(draname)
+    input_data = sentinet(draname, act)
     with open("App/data1.json", "r") as json_file:
         data = json.load(json_file)
         data.append(input_data)
     return render_template("Graphnetz_v3.html", data=data)
 
 
-
-
-
-def sentinet(draname):
+def sentinet(draname, act):
     gd = GetData()
     gt = GetText()
     gs = GetSentiment()
     graph = Graphdaten()
-    act = 0
+    # act = 0
     tei = gd.get_tei(draname)
     csv_drama = gd.get_csv(draname)
     replik = gt.create_replik_dict(csv_drama)

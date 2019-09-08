@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-# coding=utf-8
 import spacy
 from spacy_sentiws import spaCySentiWS
 from spacy.lang.de.stop_words import STOP_WORDS
@@ -11,7 +9,7 @@ from tqdm import tqdm
 class GetSentiment():
 
     nlp = spacy.load('de')
-    sentiws = spaCySentiWS(sentiws_path='/Users/pia/Desktop/Uni/SoSe2019/Drama Mining und Film Analyse/Projekt/figurennetzwerk/App/App/SentiWS_v2.0')
+    sentiws = spaCySentiWS(sentiws_path='/Users/pia/Desktop/Uni/SoSe2019/Drama Mining und Film Analyse/Projekt/figurennetzwerk/Senti Net/SentiWS_v2.0')
     nlp.add_pipe(sentiws)
 
     def get_sentis(self, replik):

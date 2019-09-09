@@ -3,8 +3,8 @@ from pyfiglet import Figlet
 from getData import GetData
 from getText import GetText
 from getSentiment import GetSentiment
-from Graphdaten import Graphdaten
-# from graphMalen import GraphMalen
+# from Graphdaten import Graphdaten
+from graphMalen import GraphMalen
 from helpFunction import HelpFunction
 
 import click
@@ -22,8 +22,8 @@ def main(dramaname, autor, act):
     gd = GetData()
     gt = GetText()
     gs = GetSentiment()
-    # gm = GraphMalen()
-    graph = Graphdaten()
+    gm = GraphMalen()
+    # graph = Graphdaten()
 
     if dramaname:
         dramaname = dramaname
@@ -50,26 +50,21 @@ def main(dramaname, autor, act):
     else:
         act = gt.drama_act(soup, which_act)
         replik = gt.which_type(act, replik)
-    # act = drama_act(soup, which_act)
-    # replik = fillReplik_dic(act, replik)
     replik = gs.get_sentis(replik)
     all_in_all = gs.average_senti(replik)
-    gesprocheneworte = gs.gesprocheneworte(replik)
-    characternames = graph.get_nodes(csv_drama)
-    edges = graph.get_edges(all_in_all, gesprocheneworte)
-    nodes = graph.get_sex(characternames, soup)
-    ids = graph.get_ids(characternames)
-    links = graph.get_links(edges, ids)
-    ''' Ab dem Punkt, weiß ich nicht so richtig, was zutun ist..
-        -> irgendwie mit Flask verbinden, sollte wahrscheinlich kein Problem
-        für dich sein! x3'''
-    data = graph.get_json_dict(links, nodes)
-    print(data)
-    # nodes = gm.get_nodes(csv_drama)
-    # edges = gm.get_edges(all_in_all)
-    # labels_edges = gm.get_labels(edges)
-    # graph = gm.graph(edges, nodes)
-    # gm.malen(graph, labels_edges, draname, which_act + 1)
+    # gesprocheneworte = gs.gesprocheneworte(replik)
+    # characternames = graph.get_nodes(csv_drama)
+    # edges = graph.get_edges(all_in_all, gesprocheneworte)
+    # nodes = graph.get_sex(characternames, soup)
+    # ids = graph.get_ids(characternames)
+    # links = graph.get_links(edges, ids)
+    # data = graph.get_json_dict(links, nodes)
+
+    nodes = gm.get_nodes(csv_drama)
+    edges = gm.get_edges(all_in_all)
+    labels_edges = gm.get_labels(edges)
+    graph = gm.graph(edges, nodes)
+    gm.malen(graph, labels_edges, draname, which_act + 1)
     os.system('clear')
     menu()
 

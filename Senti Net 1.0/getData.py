@@ -1,10 +1,11 @@
-u"""getData, lol."""
+# coding=utf-8
 import requests
 import re
 
 
 class GetData():
-    
+    u"""Klasse zum Crawlen der Daten."""
+
     def eingabe_drama(self, dramaname, autor):
         u"""
         Liest den Dramen- und Autorennamen ein.

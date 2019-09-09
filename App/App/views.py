@@ -11,9 +11,9 @@ import json
 @app.route('/')
 def index():
     u"""Übergibt Daten der Json-Datei an Javascript."""
-    with open("App/data1.json", "r") as json_file:
+    with open("App/data.json", "r") as json_file:
         data = json.load(json_file)
-    return render_template("Graphnetz_v3.html", data=data)
+    return render_template("index.html", data=data)
 
 
 @app.route('/', methods=['POST'])
@@ -29,10 +29,10 @@ def my_form_post():
     actauswahl = request.form['Akt']
     draname = gd.eingabe_drama(name, autor)
     input_data = sentinet(draname, actauswahl)
-    with open("App/data1.json", "r") as json_file:
+    with open("App/data.json", "r") as json_file:
         data = json.load(json_file)
         data.append(input_data)
-    return render_template("Graphnetz_v3.html", data=data)
+    return render_template("index.html", data=data)
 
 
 def sentinet(draname, actauswahl):
@@ -47,7 +47,6 @@ def sentinet(draname, actauswahl):
     gt = GetText()
     gs = GetSentiment()
     graph = Graphdaten()
-    # act = 0
     tei = gd.get_tei(draname)
     csv_drama = gd.get_csv(draname)
     replik = gt.create_replik_dict(csv_drama)
@@ -59,8 +58,6 @@ def sentinet(draname, actauswahl):
     else:
         act = gt.drama_act(soup, which_act)
         replik = gt.which_type(act, replik)
-    # act = drama_act(soup, which_act)
-    # replik = fillReplik_dic(act, replik)
     replik = gs.get_sentis(replik)
     all_in_all = gs.average_senti(replik)
     gesprocheneworte = gs.gesprocheneworte(replik)

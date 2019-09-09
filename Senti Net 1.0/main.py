@@ -3,7 +3,6 @@ from pyfiglet import Figlet
 from getData import GetData
 from getText import GetText
 from getSentiment import GetSentiment
-# from Graphdaten import Graphdaten
 from graphMalen import GraphMalen
 from helpFunction import HelpFunction
 
@@ -15,15 +14,12 @@ import os
 @click.option('--dramaname', help='Name des Dramas.')
 @click.option('--autor', help='Nachname des Autors.')
 @click.option('--act', help='Akt des Dramas.')
-
-
 def main(dramaname, autor, act):
     u"""Main zum Ausführen des Programms."""
     gd = GetData()
     gt = GetText()
     gs = GetSentiment()
     gm = GraphMalen()
-    # graph = Graphdaten()
 
     if dramaname:
         dramaname = dramaname
@@ -52,14 +48,6 @@ def main(dramaname, autor, act):
         replik = gt.which_type(act, replik)
     replik = gs.get_sentis(replik)
     all_in_all = gs.average_senti(replik)
-    # gesprocheneworte = gs.gesprocheneworte(replik)
-    # characternames = graph.get_nodes(csv_drama)
-    # edges = graph.get_edges(all_in_all, gesprocheneworte)
-    # nodes = graph.get_sex(characternames, soup)
-    # ids = graph.get_ids(characternames)
-    # links = graph.get_links(edges, ids)
-    # data = graph.get_json_dict(links, nodes)
-
     nodes = gm.get_nodes(csv_drama)
     edges = gm.get_edges(all_in_all)
     labels_edges = gm.get_labels(edges)
@@ -82,7 +70,6 @@ def menu():
         f = Figlet(font='roman')
         print(hf.colorize(str(f.renderText('Senti Net')), 'b'))
         print(hf.colorize("Version 2.0, jetzt auch endlich mit SentiWS \n", 'c'))
-        # Print some badass ascii art header here !
         for item in menu_items:
             for key, value in item.items():
                 print (hf.colorize("[{}]: {}".format(str(menu_items.index(item)), key), 'y'))

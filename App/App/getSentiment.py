@@ -12,7 +12,7 @@ class GetSentiment():
     u"""Klasse zur Sentiment-Berechnung."""
 
     nlp = spacy.load('de')
-    sentiws = spaCySentiWS(sentiws_path='/Users/pia/Desktop/Uni/SoSe2019/Drama Mining und Film Analyse/Projekt/figurennetzwerk/App/App/SentiWS_v2.0')
+    sentiws = spaCySentiWS(sentiws_path='App/SentiWS_v2.0')
     nlp.add_pipe(sentiws)
 
     def get_sentis(self, replik):

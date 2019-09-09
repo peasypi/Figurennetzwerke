@@ -65,5 +65,5 @@ class GraphMalen():
                                      label_pos=0.3, font_color='#088A68')
 
         plt.tight_layout()
-        plt.savefig("/Users/Pia/Desktop/{}_Akt{}.png".format(draname, which_act), format="PNG")
+        plt.savefig("{}_Akt{}.png".format(draname, which_act), format="PNG")
         plt.show()

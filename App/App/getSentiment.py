@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+# !/usr/bin/python3
 # coding=utf-8
 import spacy
 from spacy_sentiws import spaCySentiWS
@@ -9,12 +9,23 @@ from tqdm import tqdm
 
 
 class GetSentiment():
+    u"""Klasse zur Sentiment-Berechnung."""
 
     nlp = spacy.load('de')
     sentiws = spaCySentiWS(sentiws_path='/Users/pia/Desktop/Uni/SoSe2019/Drama Mining und Film Analyse/Projekt/figurennetzwerk/App/App/SentiWS_v2.0')
     nlp.add_pipe(sentiws)
 
     def get_sentis(self, replik):
+        u"""
+        Ordnet den Repliken einen Sentimentwert zu.
+
+        Geht jedes Wort der Replik durch, löscht Stopwörter, und ordnet
+        Sentiment zu. Alle Sentimentwerte werden addiert und als value der
+        Replik eingesetzt.
+
+        :param replik: Dictionary mit Beziehungen und Repliken
+        :return: Dictionary mit hinzugefügten Sentimentwerten
+        """
         for key in tqdm(replik):
             for innerkey in replik[key]:
                 text = re.sub(r"\.{0,3},*!*\?*-*", "", innerkey)
@@ -43,6 +54,15 @@ class GetSentiment():
         return replik
 
     def average_senti(self, replik):
+        u"""
+        Rechnet alle Sentimentwerte der Beziehungen zusammen.
+
+        Erstellt neues Dictionary mit Beziehung als Key und gesamten
+        Sentimentwert als Value.
+
+        :param replik: Replik-Dictionary mit Sentimentwerten
+        :return: Dictionary mit Beziehungen und deren Sentimentwerte
+        """
         all_in_all = {}
         for key in replik:
             gesamtsentiment = 0
@@ -55,6 +75,12 @@ class GetSentiment():
         return all_in_all
 
     def gesprocheneworte(self, replik):
+        u"""
+        Rechnet zueinander gesprochene Worte zusammen.
+
+        :param replik: Replik-Dictionary mit Sentimentwerten
+        :return: Dictionary mit Anzahl der gesprochenen Worte
+        """
         gesprocheneworte = {}
         for key in replik:
             anzahlworte = 0
@@ -67,23 +93,3 @@ class GetSentiment():
                 gesprocheneworte[key] = anzahlworte
 
         return gesprocheneworte
-
-'''def get_sentis(self, replik):
-        for key in tqdm(replik):
-            for innerkey in replik[key]:
-                senti = tb(innerkey)
-                replik[key][innerkey] = senti.sentiment.polarity
-        return replik
-
-
-    def average_senti(self,replik):
-        all_in_all = {}
-        for key in replik:
-            x = 0
-            for innerkey, value in replik[key].items():
-                x = (x + value)
-                all_in_all[key] = x
-        for key, value in all_in_all.items():
-            all_in_all[key] = value / len(replik[key])
-        return all_in_all
-'''

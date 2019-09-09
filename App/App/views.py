@@ -10,7 +10,7 @@ import json
 
 @app.route('/')
 def index():
-
+    u"""Übergibt Daten der Json-Datei an Javascript."""
     with open("App/data1.json", "r") as json_file:
         data = json.load(json_file)
     return render_template("Graphnetz_v3.html", data=data)
@@ -18,19 +18,31 @@ def index():
 
 @app.route('/', methods=['POST'])
 def my_form_post():
+    u"""
+    Fügt Daten des analysierenden Dramas zur Json-Datei hinzu.
+
+    Bekommt Namen, Autor und Akt des zu analysierenden Dramas
+    """
     gd = GetData()
     name = request.form['Name']
     autor = request.form['Autor']
-    act = request.form['Akt']
+    actauswahl = request.form['Akt']
     draname = gd.eingabe_drama(name, autor)
-    input_data = sentinet(draname, act)
+    input_data = sentinet(draname, actauswahl)
     with open("App/data1.json", "r") as json_file:
         data = json.load(json_file)
         data.append(input_data)
     return render_template("Graphnetz_v3.html", data=data)
 
 
-def sentinet(draname, act):
+def sentinet(draname, actauswahl):
+    u"""
+    Führt Programm aus.
+
+    :param draname: Name+Autor des Dramas
+    :param actauswahl: ausgewählter Akt
+    :return: Json-like-Data
+    """
     gd = GetData()
     gt = GetText()
     gs = GetSentiment()
@@ -40,7 +52,7 @@ def sentinet(draname, act):
     csv_drama = gd.get_csv(draname)
     replik = gt.create_replik_dict(csv_drama)
     soup = gt.stir_the_soup(tei)
-    which_act = int(act) - 1
+    which_act = int(actauswahl) - 1
     if which_act == -1:
         total = gt.drama_total(soup)
         replik = gt.which_type(total, replik)

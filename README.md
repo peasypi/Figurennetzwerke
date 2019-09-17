@@ -61,7 +61,7 @@ $ git clone https://git.informatik.uni-leipzig.de/vp38kaqy/figurennetzwerk.git
 ###### 2. Requierements installieren.
 
 ```sh
-$ pip install -r requierements.txt
+$ py -m pip install --user -r requierements.txt
 ```
 ###### 3. Spacy installieren 
 ```sh

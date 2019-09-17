@@ -8,10 +8,10 @@ Um SentiNet zu nutzen, müssen zu aller erst ein paar Dinge eingerichtet werden,
 ```sh
 $ git clone https://git.informatik.uni-leipzig.de/vp38kaqy/figurennetzwerk.git
 ```
-###### 2. Requierements installieren.
+###### 2. Requirements installieren.
 
 ```sh
-$ pip install -r requierements.txt
+$ pip install -r requirements.txt
 ```
 
 ###### 3. In den richtigen Ordner gehen
@@ -52,16 +52,17 @@ Nach dem die Analyse abgeschlossen ist, kannst du in der Dropdownliste unter *De
 ###### 1. Microsoft Visual C++ Build Tool installieren
 Unter dem Link https://visualstudio.microsoft.com/de/downloads/ muss das Visual Studio 2019 installiert werden (unter Community -> kostenloser Download)
 Ist der Installer installiert, muss jetzt ausgewählt werden, was gebraucht wird: 
-a) Unter "Windows" "Desktop Developer with C++" auswählen
-b) Unter "Web & Cloud" "Python development" auswählen, dann beides installieren 
+1. Unter "Windows" "Desktop Developer with C++" auswählen
+2. Unter "Web & Cloud" "Python development" auswählen, dann beides installieren 
+
 ###### 2. Repo clonen
 ```sh
 $ git clone https://git.informatik.uni-leipzig.de/vp38kaqy/figurennetzwerk.git
 ```
-###### 2. Requierements installieren.
+###### 2. Requirements installieren.
 
 ```sh
-$ py -m pip install --user -r requierements.txt
+$ py -m pip install --user -r requirements.txt
 ```
 ###### 3. Spacy installieren 
 ```sh
@@ -69,7 +70,7 @@ $ py -m spacy download --user de_core_news_sm
 ```
 
 Im Python-Interpreter: 
-```py
+```python
 import spacy
 nlp = spacy.load('de_core_news_sm')
 ```

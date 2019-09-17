@@ -11,7 +11,7 @@ from tqdm import tqdm
 class GetSentiment():
     u"""Klasse zur Sentiment-Berechnung."""
 
-    nlp = spacy.load('de')
+    nlp = spacy.load('de_core_news_sm')
     sentiws = spaCySentiWS(sentiws_path='App/SentiWS_v2.0')
     nlp.add_pipe(sentiws)
 

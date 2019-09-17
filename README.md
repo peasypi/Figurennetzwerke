@@ -50,7 +50,7 @@ Nach dem die Analyse abgeschlossen ist, kannst du in der Dropdownliste unter *De
 
 ## HOW TO USE SENTINET (WINDOWS)
 ###### 1. Microsoft Visual C++ Build Tool installieren
-Unter dem Link [https://visualstudio.microsoft.com/de/downloads/] muss das Visual Studio 2019 installiert werden (unter Community -> kostenloser Download)
+Unter dem Link https://visualstudio.microsoft.com/de/downloads/ muss das Visual Studio 2019 installiert werden (unter Community -> kostenloser Download)
 Ist der Installer installiert, muss jetzt ausgewählt werden, was gebraucht wird: 
 a) Unter "Windows" "Desktop Developer with C++" auswählen
 b) Unter "Web & Cloud" "Python development" auswählen, dann beides installieren 
